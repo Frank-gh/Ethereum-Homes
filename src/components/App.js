@@ -36,7 +36,7 @@ class App extends Component {
     const networkId = await web3.eth.net.getId()
     const networkData = LandContract.networks[networkId]
     if(networkData) {
-      const landContract = web3.eth.Contract(LandContract.abi, networkData.address)
+      const landContract = new web3.eth.Contract(LandContract.abi, networkData.address)
       this.setState({ landContract })
       const landCount = await landContract.methods.landCount().call()
       this.setState({ landCount })

@@ -10,7 +10,7 @@ class Content extends Component {
     return (
       <div id="content">
         {
-          account === '0x20207A621b882AB7129b4cF038Dc2686Bc4610b8' ? // modify to contract owner
+          account === '0xE076b2185e1b96a220e51D310bD68D91d15078A5' ? // modify to contract owner
             <AddLand addLand={addLand} /> :
             <div></div>
         }
